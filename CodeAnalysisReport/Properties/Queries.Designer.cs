@@ -61,24 +61,35 @@ namespace CodeAnalysisReport.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to use pubs
-        ///
-        ///INSERT INTO CAS_code_analysis
+        ///   Looks up a localized string similar to SELECT {fn NOW()} as data_atual.
+        /// </summary>
+        internal static string DataAtual {
+            get {
+                return ResourceManager.GetString("DataAtual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO CAS_code_analysis
         ///(cas_nm_projeto,
+        ///cas_nm_solution,
         ///cas_nm_severidade,
         ///cas_cd_codigo,
         ///cas_ds_descricao,
         ///cas_nm_dll,
         ///cas_nm_caminho_arquivo,
-        ///cas_nu_linha_codigo)
+        ///cas_nu_linha_codigo,
+        ///cas_dt_execucao)
         ///VALUES
         ///(@nmProjeto,
+        ///@nmSolution,
         ///@nmSeveridade,
         ///@cdCodigo,
         ///@dsDescricao,
         ///@nmDll,
         ///@nmCaminhoArquivo,
-        ///@nuLinhaCodigo).
+        ///@nuLinhaCodigo,
+        ///@dtExecucao).
         /// </summary>
         internal static string InsertCasCodeAnalysis {
             get {

@@ -8,7 +8,7 @@ namespace CodeAnalysisReport.lib
 {
   class ReadCodeAnalysisXML
   {
-    public static List<CodeAnalysisInfo> ParseXML(string asProjeto, string asXMLFilePath)
+    public static List<CodeAnalysisInfo> ParseXML(string asProjeto, string asSolution, string asXMLFilePath)
     {
       List<CodeAnalysisInfo> loCodeAnalysisInfo = new List<CodeAnalysisInfo>();
       XmlDocument CodeAnalysisXML = new XmlDocument();
@@ -19,6 +19,7 @@ namespace CodeAnalysisReport.lib
         loCodeAnalysisInfo.Add(
           new CodeAnalysisInfo(
             asProjeto,
+            asSolution,
             node.Attributes["Level"].Value,
             node.ParentNode.Attributes["CheckId"].Value,
             node.InnerText,

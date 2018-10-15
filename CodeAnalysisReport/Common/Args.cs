@@ -6,8 +6,12 @@ namespace CodeAnalysisReport.Common
   class Args
   {
     [Option('p', "project", Required = true,
-    HelpText = "Nome do projeto que será analisado.")]
+    HelpText = "Nome do projeto que será analisado.Ex: Sagres Acadêmico")]
     public string Projeto { get; set; }
+
+    [Option('s', "solution", Required = true,
+    HelpText = "Nome da solução que será analisada.Ex: WebApp")]
+    public string Solution { get; set; }
 
     [Option('x', "xmlfile", Required = true,
     HelpText = "Arquivo xml a ser interpretado.")]

@@ -117,24 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DataAtual" xml:space="preserve">
+    <value>SELECT {fn NOW()} as data_atual</value>
+  </data>
   <data name="InsertCasCodeAnalysis" xml:space="preserve">
-    <value>use pubs
-
-INSERT INTO CAS_code_analysis
+    <value>INSERT INTO CAS_code_analysis
 (cas_nm_projeto,
+cas_nm_solution,
 cas_nm_severidade,
 cas_cd_codigo,
 cas_ds_descricao,
 cas_nm_dll,
 cas_nm_caminho_arquivo,
-cas_nu_linha_codigo)
+cas_nu_linha_codigo,
+cas_dt_execucao)
 VALUES
 (@nmProjeto,
+@nmSolution,
 @nmSeveridade,
 @cdCodigo,
 @dsDescricao,
 @nmDll,
 @nmCaminhoArquivo,
-@nuLinhaCodigo)</value>
+@nuLinhaCodigo,
+@dtExecucao)</value>
   </data>
 </root>
