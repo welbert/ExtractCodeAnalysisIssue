@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CodeAnalysisReport": {
+      "commandName": "Project",
+      "commandLineArgs": "-p \"Academico\" -x \"C:\\CodeAnalysisLog.xml\""
+    }
+  }
+}
