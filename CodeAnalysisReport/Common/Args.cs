@@ -17,6 +17,10 @@ namespace CodeAnalysisReport.Common
     HelpText = "Arquivo xml a ser interpretado.")]
     public string XMLFile { get; set; }
 
+    [Option('c', "configfile", Required = false,
+    HelpText = "Caminho do arquivo de configuração que será usado pela aplicação.")]
+    public string ConfigFile { get; set; }
+
     [HelpOption]
     public string GetUsage()
     {

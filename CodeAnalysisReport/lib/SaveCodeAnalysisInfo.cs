@@ -11,7 +11,7 @@ namespace CodeAnalysisReport.lib
   {
 
     public SqlConnection Context { get => DBTransaction.Instance.Connection; }
-    public DateTime? idtDataAtual { get; set; }
+    public DateTime? IdtDataAtual { get; set; }
 
     public bool Insert(CodeAnalysisInfo loInfo)
     {
@@ -47,7 +47,7 @@ namespace CodeAnalysisReport.lib
 
     public DateTime? GetDataAtual()
     {
-      if (idtDataAtual == null)
+      if (IdtDataAtual == null)
       {
         DateTime? ldtDataAtual = null;
         try
@@ -69,10 +69,10 @@ namespace CodeAnalysisReport.lib
         {
           ldtDataAtual = DateTime.Now;
         }
-        idtDataAtual = ldtDataAtual;
+        IdtDataAtual = ldtDataAtual;
       }
 
-      return idtDataAtual;
+      return IdtDataAtual;
     }
   }
 }
