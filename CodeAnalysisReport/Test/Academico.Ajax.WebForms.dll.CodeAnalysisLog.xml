@@ -1,0 +1,760 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Targets>
+  <Target Name="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\bin\Debug With Analysis\Academico.Ajax.WebForms.dll">
+   <Modules>
+    <Module Name="academico.ajax.webforms.dll">
+     <Messages>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Mark 'Academico.Ajax.WebForms.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="Academico.Ajax.WebForms">
+       <Types>
+        <Type Name="ReportFilterTab" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnSelecionarAlunos" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'ReportFilterTab.btnSelecionarAlunos' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#dwForm" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'ReportFilterTab.dwForm' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnSelecionarAlunos(jQueryApi.jQueryEvent)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="result" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms" File="ReportFilterTab.cs" Line="112">'ReportFilterTab.OnSelecionarAlunos(jQueryEvent)' declares a variable, 'result', of type 'JsDictionary', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms" File="ReportFilterTab.cs" Line="109">In externally visible method 'ReportFilterTab.OnSelecionarAlunos(jQueryEvent)', validate parameter 'e' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#pnKey" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'ReportFilterTab.pnKey' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tabControl" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'ReportFilterTab.tabControl' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Academico.Ajax.WebForms.Cadastro">
+       <Types>
+        <Type Name="AprovadosEmGrupo" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ppvRelatorio" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'AprovadosEmGrupo.ppvRelatorio' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SyncAprovadosEmGrupo_Step(System.Object,Trends.TFC.Ajax.Controls.ProcessIterationEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="dic" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AprovadosEmGrupo.cs" Line="60">'AprovadosEmGrupo.SyncAprovadosEmGrupo_Step(object, ProcessIterationEventArgs)' declares a variable, 'dic', of type 'JsDictionary', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AtividadeCurricular" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Collections.JsDictionary)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="36">In externally visible method 'AtividadeCurricular.AtividadeCurricular(JsDictionary)', validate parameter 'options' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AtividadeCurricular_ItemChanged(System.Object,Trends.TFC.Ajax.DataWindow.ItemChangedEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="277">'AtividadeCurricular.AtividadeCurricular_ItemChanged(object, ItemChangedEventArgs)' has a cyclomatic complexity of 46. Rewrite or refactor the method to reduce complexity to 25.</Issue>
+            </Message>
+            <Message Id="liFindRow" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="388">'AtividadeCurricular.AtividadeCurricular_ItemChanged(object, ItemChangedEventArgs)' declares a variable, 'liFindRow', of type 'int', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#btnNovaVersao" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'AtividadeCurricular.btnNovaVersao' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#btnVersoes" Kind="Field" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'AtividadeCurricular.btnVersoes' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DwFormDocente_ItemChanged(System.Object,Trends.TFC.Ajax.DataWindow.ItemChangedEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="lsNewValue" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="594">'AtividadeCurricular.DwFormDocente_ItemChanged(object, ItemChangedEventArgs)' declares a variable, 'lsNewValue', of type 'string', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#iiPopupIndex" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'AtividadeCurricular.iiPopupIndex' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ilResult" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'AtividadeCurricular.ilResult' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#lsLabelAtividade" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'AtividadeCurricular.lsLabelAtividade' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnAjaxLoad()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="43">Replace the call to 'string.Equals(string)' in 'AtividadeCurricular.OnAjaxLoad()' with a call to 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnCheckRetrieveAction()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="69">Replace the call to 'string.Equals(string)' in 'AtividadeCurricular.OnCheckRetrieveAction()' with a call to 'String.IsNullOrEmpty'.</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="74">Replace the call to 'string.Equals(string)' in 'AtividadeCurricular.OnCheckRetrieveAction()' with a call to 'String.IsNullOrEmpty'.</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="80">Replace the call to 'string.Equals(string)' in 'AtividadeCurricular.OnCheckRetrieveAction()' with a call to 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnInitForms()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="132">Replace the call to 'string.Equals(string)' in 'AtividadeCurricular.OnInitForms()' with a call to 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnLoad()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="57">Replace the call to 'string.Equals(string)' in 'AtividadeCurricular.OnLoad()' with a call to 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnNovaVersao(jQueryApi.jQueryEvent)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="lsMessage" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="434">'AtividadeCurricular.OnNovaVersao(jQueryEvent)' declares a variable, 'lsMessage', of type 'string', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#permiteRetrieve" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'AtividadeCurricular.permiteRetrieve' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#showMessage(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="846">In externally visible method 'AtividadeCurricular.showMessage(string)', validate parameter 'asMessage' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#showPopup(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="opcoes" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="512">'AtividadeCurricular.showPopup(string)' declares a variable, 'opcoes', of type 'string[]', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message Id="parametro" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="511">Parameter 'parametro' of 'AtividadeCurricular.showPopup(string)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#unidadeAutorizadaExistente(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="902">In externally visible method 'AtividadeCurricular.unidadeAutorizadaExistente(string)', validate parameter 'asArgs' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ValidaAbas(System.Decimal,System.Collections.Generic.List`1&lt;System.Collections.JsDictionary&gt;,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="AtividadeCurricular.cs" Line="822">Replace the call to 'string.Equals(string)' in 'AtividadeCurricular.ValidaAbas(decimal, List&lt;JsDictionary&gt;, string)' with a call to 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Tecnico" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CheckKeyValues()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="Tecnico.cs" Line="87">Replace the call to 'string.Equals(string)' in 'Tecnico.CheckKeyValues()' with a call to 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ControlaCampoCargo(System.Object)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="Tecnico.cs" Line="150">In externally visible method 'Tecnico.ControlaCampoCargo(object)', validate parameter 'oArg' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetItemIdPessoa()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="Tecnico.cs" Line="161">Change 'Tecnico.GetItemIdPessoa()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetNuMatricula()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="Tecnico.cs" Line="176">Change 'Tecnico.GetNuMatricula()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#isNuMatricula" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'Tecnico.isNuMatricula' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Tutores" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CheckKeyValues()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="Tutores.cs" Line="45">Replace the call to 'string.Equals(string)' in 'Tutores.CheckKeyValues()' with a call to 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#idwTutor" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'Tutores.idwTutor' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnAjaxLoad()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="lsCdMatricula" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="Tutores.cs" Line="34">'Tutores.OnAjaxLoad()' declares a variable, 'lsCdMatricula', of type 'string', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnButtonClicked(jQueryApi.jQueryEvent)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro" File="Tutores.cs" Line="56">In externally visible method 'Tutores.OnButtonClicked(jQueryEvent)', validate parameter 'e' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Academico.Ajax.WebForms.Cadastro.Alunos">
+       <Types>
+        <Type Name="Diploma" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CheckKeyValues()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro\Alunos" File="Diploma.cs" Line="48">Replace the call to 'string.operator !=(string, string)' in 'Diploma.CheckKeyValues()' with a call to 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Enade" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#dwForm2_ItemChanged(System.Object,Trends.TFC.Ajax.DataWindow.ItemChangedEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro\Alunos" File="Enade.cs" Line="137">Replace the call to 'string.Equals(string)' in 'Enade.dwForm2_ItemChanged(object, ItemChangedEventArgs)' with a call to 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnCheckUpdateAction()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro\Alunos" File="Enade.cs" Line="188">Replace the call to 'string.Equals(string)' in 'Enade.OnCheckUpdateAction()' with a call to 'String.IsNullOrEmpty'.</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro\Alunos" File="Enade.cs" Line="193">Replace the call to 'string.Equals(string)' in 'Enade.OnCheckUpdateAction()' with a call to 'String.IsNullOrEmpty'.</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro\Alunos" File="Enade.cs" Line="202">Replace the call to 'string.Equals(string)' in 'Enade.OnCheckUpdateAction()' with a call to 'String.IsNullOrEmpty'.</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro\Alunos" File="Enade.cs" Line="207">Replace the call to 'string.Equals(string)' in 'Enade.OnCheckUpdateAction()' with a call to 'String.IsNullOrEmpty'.</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro\Alunos" File="Enade.cs" Line="216">Replace the call to 'string.Equals(string)' in 'Enade.OnCheckUpdateAction()' with a call to 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="InformacoesAluno" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#idwFormComplemento" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'InformacoesAluno.idwFormComplemento' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#idwFormEndereco" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'InformacoesAluno.idwFormEndereco' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#idwFormInformacoesAdicionais" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'InformacoesAluno.idwFormInformacoesAdicionais' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#idwGridDocumentoDebito" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'InformacoesAluno.idwGridDocumentoDebito' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#idwGridEndereco" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'InformacoesAluno.idwGridEndereco' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#idwGridTelefone" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'InformacoesAluno.idwGridTelefone' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="MobilidadeAcademica" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CheckKeyValues()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro\Alunos" File="MobilidadeAcademica.cs" Line="107">Replace the call to 'string.operator !=(string, string)' in 'MobilidadeAcademica.CheckKeyValues()' with a call to 'String.IsNullOrEmpty'.</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro\Alunos" File="MobilidadeAcademica.cs" Line="112">Replace the call to 'string.operator !=(string, string)' in 'MobilidadeAcademica.CheckKeyValues()' with a call to 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#HabilitarCampos()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro\Alunos" File="MobilidadeAcademica.cs" Line="84">Replace the call to 'string.operator ==(string, string)' in 'MobilidadeAcademica.HabilitarCampos()' with a call to 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Academico.Ajax.WebForms.Cadastro.Curriculo">
+       <Types>
+        <Type Name="Curso" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Curso_ItemChanged(System.Object,Trends.TFC.Ajax.DataWindow.ItemChangedEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro\Curriculo" File="Curso.cs" Line="62">In externally visible method 'Curso.Curso_ItemChanged(object, ItemChangedEventArgs)', validate parameter 'e' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Search_SearchReturned(System.Object,Trends.TFC.Ajax.DataWindow.Services.SearchReturnedEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro\Curriculo" File="Curso.cs" Line="51">In externally visible method 'Curso.Search_SearchReturned(object, SearchReturnedEventArgs)', validate parameter 'e' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="GradeCurricular" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Collections.JsDictionary)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Cadastro\Curriculo" File="GradeCurricular.cs" Line="20">In externally visible method 'GradeCurricular.GradeCurricular(JsDictionary)', validate parameter 'options' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Academico.Ajax.WebForms.Configuracoes">
+       <Types>
+        <Type Name="Curriculo" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#idwFormMatricula" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'Curriculo.idwFormMatricula' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Academico.Ajax.WebForms.Institucionais">
+       <Types>
+        <Type Name="RegimeTrabalho" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#isMessage" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'RegimeTrabalho.isMessage' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RegimeTrabalho_ItemChanged(System.Object,Trends.TFC.Ajax.DataWindow.ItemChangedEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Institucionais" File="RegimeTrabalho.cs" Line="101">Replace the call to 'string.operator !=(string, string)' in 'RegimeTrabalho.RegimeTrabalho_ItemChanged(object, ItemChangedEventArgs)' with a call to 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Academico.Ajax.WebForms.Notas">
+       <Types>
+        <Type Name="AproveitamentoDeEstudo" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ExibirMsgRelatorio(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="asParamAtividade" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Notas" File="AproveitamentoDeEstudo.cs" Line="31">Parameter 'asParamAtividade' of 'AproveitamentoDeEstudo.ExibirMsgRelatorio(string)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExibirRelatorio(jQueryApi.jQueryObject,Trends.TFC.Ajax.Core.DialogButton,System.Object)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Notas" File="AproveitamentoDeEstudo.cs" Line="37">Replace method 'AproveitamentoDeEstudo.ExibirRelatorio(jQueryObject, DialogButton, object)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="HistoricoEscolar" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#dwKey_ItemChanged(System.Object,Trends.TFC.Ajax.DataWindow.ItemChangedEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Notas" File="HistoricoEscolar.cs" Line="31">In externally visible method 'HistoricoEscolar.dwKey_ItemChanged(object, ItemChangedEventArgs)', validate parameter 'e' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExibirMsgRelatorio(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="asParamAtividade" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Notas" File="HistoricoEscolar.cs" Line="162">Parameter 'asParamAtividade' of 'HistoricoEscolar.ExibirMsgRelatorio(string)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExibirRelatorio(jQueryApi.jQueryObject,Trends.TFC.Ajax.Core.DialogButton,System.Object)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Notas" File="HistoricoEscolar.cs" Line="168">Replace method 'HistoricoEscolar.ExibirRelatorio(jQueryObject, DialogButton, object)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Search_SearchReturned(System.Object,Trends.TFC.Ajax.DataWindow.Services.SearchReturnedEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Notas" File="HistoricoEscolar.cs" Line="107">In externally visible method 'HistoricoEscolar.Search_SearchReturned(object, SearchReturnedEventArgs)', validate parameter 'e' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RegistroNotasHistoricoEscolar" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AbrirCaderneta(jQueryApi.jQueryEvent)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Notas" File="RegistroNotasHistoricoEscolar.cs" Line="63">In externally visible method 'RegistroNotasHistoricoEscolar.AbrirCaderneta(jQueryEvent)', validate parameter 'e' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#dwForm_ItemChanged(System.Object,Trends.TFC.Ajax.DataWindow.ItemChangedEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Notas" File="RegistroNotasHistoricoEscolar.cs" Line="69">In externally visible method 'RegistroNotasHistoricoEscolar.dwForm_ItemChanged(object, ItemChangedEventArgs)', validate parameter 'e' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#dwKey_ItemChanged(System.Object,Trends.TFC.Ajax.DataWindow.ItemChangedEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Notas" File="RegistroNotasHistoricoEscolar.cs" Line="97">In externally visible method 'RegistroNotasHistoricoEscolar.dwKey_ItemChanged(object, ItemChangedEventArgs)', validate parameter 'e' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FecharCaderneta(jQueryApi.jQueryEvent)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-06-05 13:23:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\TecnoTRENDS\wserra\Projetos\Academico 2.0\Builds\3.05.001.000\Source\DotNET\Interface\Sagres2Web\Academico.Ajax.WebForms\Notas" File="RegistroNotasHistoricoEscolar.cs" Line="57">In externally visible method 'RegistroNotasHistoricoEscolar.FecharCaderneta(jQueryEvent)', validate parameter 'e' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>      
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105">
+   <Name>Array fields should not be read only</Name>
+   <Description>Read-only fields that reference arrays might not give the intended effect. Setting a field which references an array to read-only prevents the value of the field from being changed. Note that elements in the array can be changed. You can ignore this violation if protecting the contents of the array is not a concern.</Description>
+   <Resolution Name="Default">Either replace {0} with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182299.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">CriticalWarning</MessageLevel>
+   <File Name="securityrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502">
+   <Name>Avoid excessive complexity</Name>
+   <Description>Method implementations that are exceedingly complex increase the challenge of understanding and maintaining code.</Description>
+   <Resolution Name="Default">{0} has a cyclomatic complexity of {1}. Rewrite or refactor the method to reduce complexity to {2}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182212.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUnmaintainableCode" Category="Microsoft.Maintainability" CheckId="CA1505">
+   <Name>Avoid unmaintainable code</Name>
+   <Description>Types and methods with a high degree of class coupling, cyclomatic complexity and/or program length can be difficult to maintain.</Description>
+   <Resolution Name="Method">{0} has a maintainability index of {1}. Rewrite or refactor the method to increase its maintainability index (MI). An MI below {2} indicates poor maintainability, an MI between {2} and {3} indicates moderate maintainability, and an MI above {3} indicates good maintainability.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb386043.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823">
+   <Name>Avoid unused private fields</Name>
+   <Description>Private fields were detected that do not appear to be accessed within the assembly. If this violation fires in error, please send a problem report to the Visual Studio Code Analysis team.</Description>
+   <Resolution Name="Default">It appears that field {0} is never used or is only ever assigned to. Use this field or remove it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245042.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011">
+   <Name>Consider passing base types as parameters</Name>
+   <Description>Using base types as parameters to methods improves re-use of these methods if you only use methods &amp; properties from the parameter's base class. E.g. use Stream instead of FileStream as a parameter when only calling Stream.Read(), this makes the method work on all kind of streams instead of just File streams.</Description>
+   <Resolution Name="Default">Consider changing the type of parameter {0} in {1} from {2} to its base type {3}. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/3hk32yyz.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026">
+   <Name>Default parameters should not be used</Name>
+   <Description>Some programming languages do not support default parameters. Replace default parameters with method overloads that supply the default argument.</Description>
+   <Resolution Name="Default">Replace method {0} with an overload that supplies all default arguments.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182135.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>Do not catch general exception types</Name>
+   <Description>You should not catch Exception or SystemException. Catching generic exception types can hide run-time problems from the library user, and can complicate debugging. You should catch only those exceptions that you can handle gracefully.</Description>
+   <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182137.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotDeclareReadOnlyMutableReferenceTypes" Category="Microsoft.Security" CheckId="CA2104">
+   <Name>Do not declare read only mutable reference types</Name>
+   <Description>A read-only declaration for a mutable reference type does not prevent the field's instance data from being modified. For example, a read-only StringBuilder field declaration does not make sense, since the data encapsulated by the StringBuilder can be modified using the read-only reference.</Description>
+   <Resolution Name="Default">Remove the read-only designation from {0} or change the field to one that is an immutable reference type. If the reference type {1} is, in fact, immutable, exclude this message.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182302.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="25">Error</MessageLevel>
+   <File Name="securityrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051">
+   <Name>Do not declare visible instance fields</Name>
+   <Description>Instance fields that are visible outside of the type that declares them, limit your ability to change the implementation details for those data items. Use properties instead. They do not compromise usability or performance and they do provide flexibility in that they conceal the implementation details of the underlying data.</Description>
+   <Resolution Name="Default">Because field {0} is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182141.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806">
+   <Name>Do not ignore method results</Name>
+   <Description>The result of methods that return new instances of strings should be assigned to a variable and subsequently used. If the result of a method that creates a new object, such as String.ToLower(), is not assigned to a variable, the call is wasted.</Description>
+   <Resolution Name="ObjectCreation">{0} creates a new instance of {1} which is never used. Pass the instance as an argument to another method, assign the instance to a variable, or remove the object creation if it is unnecessary.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182273.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008">
+   <Name>Enums should have zero value</Name>
+   <Description>An enum should generally have a zero value. If the enum is not decorated with the Flags attribute, it should have a member with a value of zero that represents the empty state. Optionally, this value is named 'None'. For a Flags-attributed enum, a zero-valued member is optional and, if it exists, should always be named 'None'. This value should indicate that no values have been set in the enum. Using a zero-valued member for other purposes is contrary to the use of the Flags attribute in that the bitwise AND and OR operators are useless with the member.</Description>
+   <Resolution Name="NotFlagsNoZeroValue">Add a member to {0} that has a value of zero with a suggested name of 'None'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182149.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Mark assemblies with CLSCompliantAttribute</Name>
+   <Description>Assemblies should explicitly state their CLS compliance using the CLSCompliant attribute. An assembly without this attribute is not CLS-compliant. Assemblies, modules, and types can be CLS-compliant even if some parts of the assembly, module, or type are not CLS-compliant. The following rules apply: 1) If the element is marked CLSCompliant, any noncompliant members must have the CLSCompliant attribute present with its argument set to false. 2) A comparable CLS-compliant alternative member must be supplied for each member that is not CLS-compliant.</Description>
+   <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211">
+   <Name>Non-constant fields should not be visible</Name>
+   <Description>Static fields should be constant unless you carefully manage access to the field using locks. Using static variables without making them thread safe can compromise execution state. This rule applies to managed code libraries. If the analyzed assembly is an application, it is usually safe to exclude violations of this rule.</Description>
+   <Resolution Name="Default">Consider making {0} non-public or a constant.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182353.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+   <Name>Remove unused locals</Name>
+   <Description>Remove locals that are not used or are only assigned to in method implementations.</Description>
+   <Resolution Name="Default">{0} declares a variable, {1}, of type {2}, which is never used or is only assigned to. Use this variable or remove it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182278.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+   <Name>Review unused parameters</Name>
+   <Description>Review parameters in non-virtual methods that are not used in the method body to ensure no correctness exists around failure to access them. Unused parameters incur maintenance and performance costs. Sometimes a violation of this rule can point to an implementation bug in the method (i.e. the parameter should actually have been used in the method body). Exclude warnings of this rule if the parameter has to exist because of backward compatibility.</Description>
+   <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182268.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820">
+   <Name>Test for empty strings using string length</Name>
+   <Description>To test for empty strings, check if String.Length is equal to zero. Constructs such as "".Equals(someString) and String.Empty.Equals(someString) are less efficient than testing the string length. Replace these with checks for someString.Length == 0.</Description>
+   <Resolution Name="IsNullOrEmpty">Replace the call to {0} in {1} with a call to 'String.IsNullOrEmpty'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182279.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+   <Name>Use properties where appropriate</Name>
+   <Description>Properties should be used instead of Get/Set methods in most situations. Methods are preferable to properties in the following situations: the operation is a conversion, is expensive or has an observable side-effect; the order of execution is important; calling the member twice in succession creates different results; a member is static but returns a mutable value; or the member returns an array.</Description>
+   <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182181.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

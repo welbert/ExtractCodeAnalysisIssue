@@ -33,13 +33,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="AppSettings.json">
+    <None Update="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /y $(ProjectDir)AppSettings.json $(ProjectDir)$(OutDir)" />
+    <Exec Command="xcopy /y $(ProjectDir)Test\Academico.Ajax.WebForms.dll.CodeAnalysisLog.xml $(ProjectDir)$(OutDir)" />
   </Target>
 
 </Project>

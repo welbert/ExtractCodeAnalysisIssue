@@ -12,10 +12,12 @@ namespace CodeAnalysisReport.lib
 
     public SqlConnection Context { get => DBTransaction.Instance.Connection; }
     public DateTime? IdtDataAtual { get; set; }
+    SqlTransaction ioTransaction;
 
-    public bool Insert(CodeAnalysisInfo loInfo)
+    private bool Insert(CodeAnalysisInfo loInfo)
     {
       var loQueryInsertCas = Context.CreateCommand();
+      loQueryInsertCas.Transaction = ioTransaction;
       loQueryInsertCas.CommandText = Queries.InsertCasCodeAnalysis;
       loQueryInsertCas.Parameters.AddWithValue("@nmProjeto", loInfo.Project);
       loQueryInsertCas.Parameters.AddWithValue("@nmSolution", loInfo.Solution);
@@ -25,54 +27,68 @@ namespace CodeAnalysisReport.lib
       loQueryInsertCas.Parameters.AddWithValue("@nmDll", loInfo.Dll);
       loQueryInsertCas.Parameters.AddWithValue("@nmCaminhoArquivo", loInfo.File);
       loQueryInsertCas.Parameters.AddWithValue("@nuLinhaCodigo", loInfo.Line);
-      loQueryInsertCas.Parameters.AddWithValue("@dtExecucao", GetDataAtual());
+      loQueryInsertCas.Parameters.AddWithValue("@dtExecucao", DataAtual);
       loQueryInsertCas.CommandType = CommandType.Text;
 
-      Context.Open();
       loQueryInsertCas.ExecuteNonQuery();
-      Context.Close();
 
       return true;
     }
 
     public bool InsertList(List<CodeAnalysisInfo> loInfos)
     {
-      loInfos.ForEach((info) =>
+      Context.Open();
+      ioTransaction = Context.BeginTransaction();
+      try
       {
-        this.Insert(info);
-      });
+        loInfos.ForEach((info) =>
+        {
+          this.Insert(info);
+        });
+        ioTransaction.Commit();
+      }
+      catch (Exception e)
+      {
+        ioTransaction.Rollback();
+        throw e;
+      }
+      finally
+      {
+        Context.Close();
+      }
 
       return true;
     }
 
-    public DateTime? GetDataAtual()
+    public DateTime? DataAtual
     {
-      if (IdtDataAtual == null)
+      get
       {
-        DateTime? ldtDataAtual = null;
-        try
+        if (IdtDataAtual == null)
         {
-          Context.Open();
-          var loQueryDataAtual = Context.CreateCommand();
-          loQueryDataAtual.CommandText = Queries.DataAtual;
-
-          loQueryDataAtual.CommandType = CommandType.Text;
-          using (var reader = loQueryDataAtual.ExecuteReader())
+          DateTime? ldtDataAtual = null;
+          try
           {
-            reader.Read();
-            ldtDataAtual = reader.GetDateTime(0);
+            var loQueryDataAtual = Context.CreateCommand();
+            loQueryDataAtual.CommandText = Queries.DataAtual;
+
+            loQueryDataAtual.CommandType = CommandType.Text;
+            using (var reader = loQueryDataAtual.ExecuteReader())
+            {
+              reader.Read();
+              ldtDataAtual = reader.GetDateTime(0);
+            }
+
           }
+          catch (Exception e)
+          {
+            ldtDataAtual = DateTime.Now;
+          }
+          IdtDataAtual = ldtDataAtual;
+        }
 
-          Context.Close();
-        }
-        catch (Exception e)
-        {
-          ldtDataAtual = DateTime.Now;
-        }
-        IdtDataAtual = ldtDataAtual;
+        return IdtDataAtual;
       }
-
-      return IdtDataAtual;
     }
   }
 }

@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using System.Linq;
 
 namespace CodeAnalysisReport.lib
 {
@@ -31,12 +30,7 @@ namespace CodeAnalysisReport.lib
 
     public string GetConnectionString()
     {
-      string lsConnectionString = string.Empty;
-      Configuration.GetSection("connection").GetChildren().ToList().ForEach((paramater) =>
-      {
-        lsConnectionString += paramater.Key + "='" + paramater.Value + "';";
-      });
-      return lsConnectionString;
+      return Configuration.GetConnectionString("Default");
     }
 
   }

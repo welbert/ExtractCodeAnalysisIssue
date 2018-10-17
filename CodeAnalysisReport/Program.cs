@@ -21,13 +21,16 @@ namespace CodeAnalysisReport
           Environment.Exit(0);
         }
 
+        //Get issues
         List<CodeAnalysisInfo> loCodeAnalysisInfo = GetListCodeAnalysisInfo(options);
 
+        //Set Config
         InitConfigFile(options);
 
-
+        //Init DbTransaction
         DBTransaction.Instance.CreateConnection(ConfigFile.Instance.GetConnectionString());
 
+        //Insert Issues
         new SaveCodeAnalysisInfo().InsertList(loCodeAnalysisInfo);
       }
     }
