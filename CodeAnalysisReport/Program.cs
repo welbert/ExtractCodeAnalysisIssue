@@ -1,5 +1,9 @@
 ﻿using CodeAnalysisReport.Common;
+using CodeAnalysisReport.Database;
 using CodeAnalysisReport.lib;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,27 +24,36 @@ namespace CodeAnalysisReport
           Console.Write("É necessário informar o xml ou a pasta que contem o xml a ser interpretado. Verifique em --help");
           Environment.Exit(0);
         }
+        
+        var services = new ServiceCollection();
+
+
+        /* Configuração */
+        var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile(options.ConfigFile ?? "appsettings.json", optional: true, reloadOnChange: true);
+
+        IConfiguration configuration = builder.Build();
+
+        //Para adicionar a configuração como serviço
+        //Por ex: Colocar um IConfiguration no construtor de SaveCodeAnalysisInfo
+        //services.AddSingleton(configuration);
+
+        /* Contexto do EF Core */
+        services.AddDbContext<ReportDbContext>(o => o.UseSqlServer(configuration.GetConnectionString("Default")));
+
+        /* O próprio SaveCodeAnalysisInfo */
+        services.AddTransient<SaveCodeAnalysisInfo>();
+
+        var serviceProvider = services.BuildServiceProvider();
 
         //Get issues
         List<CodeAnalysisInfo> loCodeAnalysisInfo = GetListCodeAnalysisInfo(options);
 
-        //Set Config
-        InitConfigFile(options);
-
-        //Init DbTransaction
-        DBTransaction.Instance.CreateConnection(ConfigFile.Instance.GetConnectionString());
-
         //Insert Issues
-        new SaveCodeAnalysisInfo().InsertList(loCodeAnalysisInfo);
+        serviceProvider.GetService<SaveCodeAnalysisInfo>()
+          .InsertList(loCodeAnalysisInfo);
       }
-    }
-
-    private static void InitConfigFile(Args options)
-    {
-      if (options.ConfigFile == null)
-        options.ConfigFile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"AppSettings.json");
-
-      ConfigFile.Instance.Init(options.ConfigFile);
     }
 
     private static List<CodeAnalysisInfo> GetListCodeAnalysisInfo(Args options)

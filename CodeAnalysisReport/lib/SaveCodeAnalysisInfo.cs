@@ -1,5 +1,7 @@
 ﻿using CodeAnalysisReport.Common;
-using CodeAnalysisReport.Properties;
+using CodeAnalysisReport.Database;
+using CodeAnalysisReport.Database.Model;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,86 +11,38 @@ namespace CodeAnalysisReport.lib
 {
   class SaveCodeAnalysisInfo
   {
+    ReportDbContext _dbContext;
+    DateTime _dataAtual = DateTime.Now;
 
-    public SqlConnection Context { get => DBTransaction.Instance.Connection; }
-    public DateTime? IdtDataAtual { get; set; }
-    SqlTransaction ioTransaction;
-
-    private bool Insert(CodeAnalysisInfo loInfo)
+    public SaveCodeAnalysisInfo(ReportDbContext dbContext)
     {
-      var loQueryInsertCas = Context.CreateCommand();
-      loQueryInsertCas.Transaction = ioTransaction;
-      loQueryInsertCas.CommandText = Queries.InsertCasCodeAnalysis;
-      loQueryInsertCas.Parameters.AddWithValue("@nmProjeto", loInfo.Project);
-      loQueryInsertCas.Parameters.AddWithValue("@nmSolution", loInfo.Solution);
-      loQueryInsertCas.Parameters.AddWithValue("@nmSeveridade", loInfo.Severity);
-      loQueryInsertCas.Parameters.AddWithValue("@cdCodigo", loInfo.Code);
-      loQueryInsertCas.Parameters.AddWithValue("@dsDescricao", loInfo.Description);
-      loQueryInsertCas.Parameters.AddWithValue("@nmDll", loInfo.Dll);
-      loQueryInsertCas.Parameters.AddWithValue("@nmCaminhoArquivo", loInfo.File);
-      loQueryInsertCas.Parameters.AddWithValue("@nuLinhaCodigo", loInfo.Line);
-      loQueryInsertCas.Parameters.AddWithValue("@dtExecucao", DataAtual);
-      loQueryInsertCas.CommandType = CommandType.Text;
-
-      loQueryInsertCas.ExecuteNonQuery();
-
-      return true;
+      _dbContext = dbContext;
     }
 
-    public bool InsertList(List<CodeAnalysisInfo> loInfos)
+    private void Insert(CodeAnalysisInfo loInfo)
     {
-      Context.Open();
-      ioTransaction = Context.BeginTransaction();
-      try
+      _dbContext.CodeAnalysis.Add(new CodeAnalysis
       {
-        loInfos.ForEach((info) =>
-        {
-          this.Insert(info);
-        });
-        ioTransaction.Commit();
-      }
-      catch (Exception e)
-      {
-        ioTransaction.Rollback();
-        throw e;
-      }
-      finally
-      {
-        Context.Close();
-      }
-
-      return true;
+        Projeto = loInfo.Project,
+        Solution = loInfo.Solution,
+        Severidade = loInfo.Severity,
+        Codigo = loInfo.Code,
+        Descricao = loInfo.Description,
+        Dll = loInfo.Dll,
+        CaminhoArquivo = loInfo.File,
+        LinhaCodigo = loInfo.Line,
+        DataExecucao = _dataAtual
+      });
     }
 
-    public DateTime? DataAtual
+    public void InsertList(List<CodeAnalysisInfo> loInfos)
     {
-      get
+      loInfos.ForEach((info) =>
       {
-        if (IdtDataAtual == null)
-        {
-          DateTime? ldtDataAtual = null;
-          try
-          {
-            var loQueryDataAtual = Context.CreateCommand();
-            loQueryDataAtual.CommandText = Queries.DataAtual;
+        this.Insert(info);
+      });
 
-            loQueryDataAtual.CommandType = CommandType.Text;
-            using (var reader = loQueryDataAtual.ExecuteReader())
-            {
-              reader.Read();
-              ldtDataAtual = reader.GetDateTime(0);
-            }
-
-          }
-          catch (Exception e)
-          {
-            ldtDataAtual = DateTime.Now;
-          }
-          IdtDataAtual = ldtDataAtual;
-        }
-
-        return IdtDataAtual;
-      }
+      _dbContext.SaveChanges();
     }
   }
 }
