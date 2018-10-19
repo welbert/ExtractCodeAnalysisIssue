@@ -2,7 +2,7 @@
   "profiles": {
     "CodeAnalysisReport": {
       "commandName": "Project",
-      "commandLineArgs": "-p \"Academico\" -x \"Academico.Ajax.WebForms.dll.CodeAnalysisLog.xml\" -s \"WebApp\""
+      "commandLineArgs": "-p \"Academico\" -x \"Academico.PBNet.Server.dll.CodeAnalysisLog.xml\" -s \"WebApp\""
     }
   }
 }

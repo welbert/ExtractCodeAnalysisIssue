@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /y $(ProjectDir)Test\Academico.Ajax.WebForms.dll.CodeAnalysisLog.xml $(ProjectDir)$(OutDir)" />
+    <Exec Command="xcopy /y $(ProjectDir)Test\*CodeAnalysisLog.xml $(ProjectDir)$(OutDir)" />
   </Target>
 
 </Project>

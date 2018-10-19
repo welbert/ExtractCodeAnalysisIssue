@@ -24,14 +24,15 @@ namespace CodeAnalysisReport
           Console.Write("É necessário informar o xml ou a pasta que contem o xml a ser interpretado. Verifique em --help");
           Environment.Exit(0);
         }
-        
+
         var services = new ServiceCollection();
 
 
         /* Configuração */
         var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile(options.ConfigFile ?? "appsettings.json", optional: true, reloadOnChange: true);
+                .AddJsonFile(options.ConfigFile ?? Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"appsettings.json"),
+                            optional: true, reloadOnChange: true);
 
         IConfiguration configuration = builder.Build();
 
