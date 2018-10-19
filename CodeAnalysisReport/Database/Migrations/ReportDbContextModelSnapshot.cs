@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace CodeAnalysisReport.Migrations
+namespace CodeAnalysisReport.Database.Migrations
 {
     [DbContext(typeof(ReportDbContext))]
     partial class ReportDbContextModelSnapshot : ModelSnapshot
@@ -21,7 +21,7 @@ namespace CodeAnalysisReport.Migrations
 
             modelBuilder.Entity("CodeAnalysisReport.Database.Model.CodeAnalysis", b =>
                 {
-                    b.Property<int>("CodeAnalysisId")
+                    b.Property<long>("CodeAnalysisId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 

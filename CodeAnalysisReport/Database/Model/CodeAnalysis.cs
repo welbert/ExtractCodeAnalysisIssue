@@ -5,7 +5,7 @@ namespace CodeAnalysisReport.Database.Model
 {
   public class CodeAnalysis
   {
-    public int CodeAnalysisId { get; set; }
+    public long CodeAnalysisId { get; set; }
 
     [MaxLength(100)]
     [Required]

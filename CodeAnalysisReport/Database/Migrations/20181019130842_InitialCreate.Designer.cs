@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace CodeAnalysisReport.Migrations
+namespace CodeAnalysisReport.Database.Migrations
 {
     [DbContext(typeof(ReportDbContext))]
-    [Migration("20181017235219_InitialCreate")]
+    [Migration("20181019130842_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,7 +23,7 @@ namespace CodeAnalysisReport.Migrations
 
             modelBuilder.Entity("CodeAnalysisReport.Database.Model.CodeAnalysis", b =>
                 {
-                    b.Property<int>("CodeAnalysisId")
+                    b.Property<long>("CodeAnalysisId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 

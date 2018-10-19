@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace CodeAnalysisReport.Migrations
+namespace CodeAnalysisReport.Database.Migrations
 {
     public partial class InitialCreate : Migration
     {
@@ -12,7 +12,7 @@ namespace CodeAnalysisReport.Migrations
                 name: "CodeAnalysis",
                 columns: table => new
                 {
-                    CodeAnalysisId = table.Column<int>(nullable: false)
+                    CodeAnalysisId = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Projeto = table.Column<string>(maxLength: 100, nullable: false),
                     Solution = table.Column<string>(maxLength: 100, nullable: false),
